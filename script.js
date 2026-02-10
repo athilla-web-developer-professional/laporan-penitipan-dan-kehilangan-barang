@@ -1,4 +1,4 @@
-const WEB_APP_URL = "";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw1sfUrVGpKrkv17bMzcMpq_0xxU9RsKrEsq23ciXFFtEwiNEfcNHJvh-13VbbuqVQt/exec";
 
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
