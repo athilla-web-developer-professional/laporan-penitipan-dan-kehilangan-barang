@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Barang - SMAN 1 Magetan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">SMAN 1 Magetan</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showPage('beranda')">Beranda</a></li>
+            <li><a href="#" onclick="showPage('titipan')">Titipan</a></li>
+            <li><a href="#" onclick="showPage('kehilangan')">Kehilangan</a></li>
+            <li><a href="#" onclick="showPage('form')">Lapor</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <section id="beranda" class="page">
+            <h1>Selamat Datang</h1>
+            <p>Sistem Informasi pengelolaan barang titipan dan kehilangan siswa SMAN 1 Magetan.</p>
+        </section>
+
+        <section id="data-section" class="page" style="display:none">
+            <h2 id="page-title">Data Barang</h2>
+            <input type="text" id="searchBar" placeholder="Cari barang..." onkeyup="filterTable()">
+            <div class="table-container">
+                <table id="dataTable">
+                    <thead><tr id="tableHeader"></tr></thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="form" class="page" style="display:none">
+            <h2>Form Laporan Baru</h2>
+            <form id="reportForm">
+                <select id="kategori" required>
+                    <option value="Titipan">Barang Titipan</option>
+                    <option value="Kehilangan">Barang Kehilangan</option>
+                </select>
+                <input type="text" id="namaBarang" placeholder="Nama Barang" required>
+                <textarea id="detail" placeholder="Deskripsi / Ciri-ciri" required></textarea>
+                <input type="text" id="lokasi" placeholder="Lokasi (Penyimpanan/Kehilangan)" required>
+                <input type="text" id="namaUser" placeholder="Nama Anda (Penitip/Pelapor)" required>
+                <button type="submit">Kirim Laporan</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
